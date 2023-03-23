@@ -42,4 +42,56 @@ Next I will create another variable const liEL which stands of list element. For
 
 I need to create an li element because the they will be appended as children of this ul element with id list. When I open the dev tools of the final work you can see that the ul element has li elements as children.
 
-Next liEl dot innerHTMl equals back quotes and a span tag.
+Next liEl dot innerHTML equals back quotes and a span tag. Going back to my dev tools, each li element has a span tag as a child and this child span tag, actually contains the task entered.
+
+That means within this span tag here, I will input a dollar sign, curly braces then newTask. This tells us that whatever I type in the input field will be put within the span tag when I submit.
+
+Now unto the trash button. The trash button will be importted from font awesome, that means I need to add the font awesome CDN link to my HTML file.
+
+I will copy this link here and paste it below my title right here. Now I will search trash in font awesome. This is the icon I need so I will click to reveal its html code.
+
+As you can see it comes with an i tag so that means I will create another element in my JavaScript file.
+
+Over here I will define a new variable trashBtn and then I will create the element i. The i tag comes with two class names which are fa-solid and fa-trash.
+
+So I will add those classes to my i tag like this, trashBtn dot classList dot add then into bracket fa-solid. I will repeat this line and change this to fa-trash.
+
+Now that I have defined the trash icon, i need to append it as a child of the liEL. I will just say liEl dot appendChild into bracket, trashBtn.
+
+Finally I have to append the liEl as a child of the ul element with class list.
+
+After the task has being added to the list, the input field must go back to being empty so I will just add input dot value equals empty string.
+
+I will now type something in the input field meditate and then submit, you can see it gets added to the list. I will add another task and my code is working as it should.
+
+Now I will add functionality to the trash icon. I need the task to delete when it is clicked.
+
+Below it I will add trashBtn dot addEventListener, bracket opens click, then I will add an arrow function. Since I need that particular list element when clicked I will add liEL dot remove.
+
+Lets see if my trash icon is working. You can see the task disappears the moment I clicked the trash icon.
+
+Basically I am done with the to do app. I now I have to add the storage functionality to it.
+
+If you are still with me until this point then it means you are trying to learn something new. Make sure to subscribe and hit the bell icon so you get to see more tutorial videos like this.
+
+For the storage functionality, I will create a new function with name updateStorage. Within the function, I will create a new variable allTasks equals document dot querySelectorAll li span. This selects all the span tags which are children of each li tag.
+
+Next I will create another variable taskArr then assign it to an empty array. Here is what I want to do.
+
+I want to push each task into this taskArr. For that I will write, allTask dot forEach, an arrow function comes with a single parameter task.
+
+Within the function I will put taskArr dot push then I will create an object. The object will contain the value of the span tag or the task, so value assigned to task dot innerText.
+
+Now lets access the local storage. Local storage dot setItem into bracket. It takes two arguments, the first one is the key which I can set it to any string. I will just type taskArr and then JSON dot stringify into bracket, taskArr.
+
+This line simply means I am storing this array in my local storage. The stringify function here converts the array to a string. Before you can store an array in the local storage, it needs to be converted to a string.
+
+Now I call my function over here in the todo function.
+
+To see what is being stored in your local storage, open dev tools, click on application. On the left side you can see local storage, below it is my live server address. I will click it then it reveals what is being stored.
+
+I will enter something then submit, and you can see that what I entered appears here. If I delete a task, the updateStorage function needs to run so I will call it here too.
+
+I want you to take note, the tasks have being stored in the local storage but see what happens when I reload the page. The tasks has disappeared. But you can see they are still stored in the local storage.
+
+I can fix that by calling the tasks again any time the page reloads.

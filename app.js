@@ -19,7 +19,7 @@ function toDo(task){
     let newTask = input.value;
 
     if(task){
-        newTask = task.name;
+        newTask = task.value;
     }
 
     const liEl = document.createElement('li');
@@ -29,7 +29,7 @@ function toDo(task){
 
     let trashBtn = document.createElement('i');
 
-    trashBtn.classList.add('fas');
+    trashBtn.classList.add('fa-solid');
     trashBtn.classList.add('fa-trash');
     
     liEl.appendChild(trashBtn);
@@ -46,13 +46,13 @@ function toDo(task){
 }
 
 function updateStorage(){
-    const allTasks = document.querySelectorAll('li');
+    const allTasks = document.querySelectorAll('li span');
 
     let taskArr = [];
 
     allTasks.forEach(task => {
         taskArr.push({
-            name: task.innerText
+            value: task.innerText
         })
     })
 
