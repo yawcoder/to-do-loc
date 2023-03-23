@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Pacifico&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#00c2cb, #fff);
+    gap: 2em;
+}
+
+h2{
+    font-family: 'nunito', sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2em 1.5em;
+    border-radius: 20px;
+    width: 350px;
+    min-height: 300px;
+    box-shadow: 0px 10px 30px 15px rgba(0,0,0,0.3);
+}
+
+form{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    height: 3em;
+    transition: 0.5s;
+    padding-left: 10px;
+    font-family: 'poppins', sans-serif;
+    font-size: 1em;
+    background-color: rgba(203,0,0,0.3);
+}
+
+input:focus{
+    outline: none;
+}
+
+ul{
+    background-color: #fff;
+}
+
+ul li{
+    margin: 1em 0;
+    min-height: 2.5em;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    width: 100%;
+}
+
+ul li span{
+    font-family: 'nunito', sans-serif;
+    font-size: 1.2em;
+}

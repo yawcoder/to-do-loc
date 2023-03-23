@@ -1,0 +1,45 @@
+On my screen here is a to do app with local storage. As you can see I have a couple of tasks here, I will go ahead and add one more and then press enter, yeah so it gets added at the bottom.
+
+This to do app has access to the local storage so every task you see here has being saved. I can reload the page several times and they will there.
+
+I can even close the tab and when I open live server again, see they are still there. They will only disappear when I click the trash button.
+
+So in this video we will learn 2 things. The first is how to build a very simple todo app and the second, how to save objects with local storage in JavaScript.
+
+I have already written the CSS to save some time so follow along while I take you through the HTML and JavaScript of this project.
+
+I have already generated my boilerplate code. Title of my page is TODO app. First thing I will do is to link my css and javascript files. Onto the body tag.
+
+h2 tag with content, to do app with Local Storage Access. Next is a div with class container. Within this div I will create a form element with id form. I will delete the action attribute cos i don't need it now.
+
+Within the form I will create an input with id input. It will have a placeholder, "Enter Your Task".
+
+Finally is a ul element with id list.
+
+I am done with HTML, lets move on to JavaScript.
+
+
+
+
+
+First thing I will do is to select all the HTML elements I will be manipulating. The form element, the input element and the ul element with id list.
+
+So the form element with id form. The input element with id input and the ul element or unordered list with id list.
+
+Next I need to add an event listener to my form element like this, form dot addEventListener. The event I am looking for is submit then a call back function comes.
+
+This statement means when the form is submitted which is when the user hits the enter key, this function should execute.
+
+Currently when I hit the enter key on the input, the page reloads. I need to prevent the page from loading any time I submit so I just say e dot prevent default.
+
+Now you can see when I hit the enter key, the page does not reload.
+
+Next I will create a function and name it to do. This means anytime I submit the form, this to do function will run. Now I will come down here and define the function.
+
+function todo and then curly braces. First I will create a new variable, newTask and assign it to input dot value. Input dot value just returns whatever has being typed in the input box.
+
+Next I will create another variable const liEL which stands of list element. For this variable I will create a new element, document dot create element li.
+
+I need to create an li element because the they will be appended as children of this ul element with id list. When I open the dev tools of the final work you can see that the ul element has li elements as children.
+
+Next liEl dot innerHTMl equals back quotes and a span tag.
